@@ -26,6 +26,7 @@ module.exports = {
         'eqeqeq': [WARNING, 'always'],
         'guard-for-in': ERROR,
         'no-caller': ERROR,
+        'no-console': WARNING,
         'no-div-regex': WARNING,
         'no-eq-null': ERROR,
         'no-eval': WARNING,
