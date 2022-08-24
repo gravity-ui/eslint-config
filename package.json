@@ -7,6 +7,15 @@
     "config"
   ],
   "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "base.js",
+    "client.js",
+    "react.js",
+    "server.js",
+    "prettier.js",
+    "constants.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gravity-ui/eslint-config"
