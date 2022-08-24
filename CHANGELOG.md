@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/gravity-ui/eslint-config/compare/v1.0.1...v1.0.2) (2022-08-24)
+
+
+### Bug Fixes
+
+* package files ([46eb340](https://github.com/gravity-ui/eslint-config/commit/46eb340661058f9eec269cf7fe16c0c2924b1977))
+
 ## 1.0.1 (2022-08-23)
 
 
