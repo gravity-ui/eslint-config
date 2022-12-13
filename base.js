@@ -11,6 +11,7 @@ module.exports = {
         es6: true,
         'shared-node-browser': true,
     },
+    plugins: ['import'],
     rules: {
         // Possible Errors
         'no-empty': OFF, // eslint:recommended
@@ -99,6 +100,33 @@ module.exports = {
         'prefer-spread': ERROR,
         'require-atomic-updates': OFF, // eslint:recommended
         'require-yield': WARNING, // eslint:recommended
+
+        // Additional Plugins
+        'import/order': [
+            ERROR,
+            {
+                'alphabetize': {
+                    order: 'asc'
+                },
+                'newlines-between': 'always',
+                'groups': [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index'
+                ],
+                'pathGroups': [
+                    {
+                        pattern: 'shared/**',
+                        group: 'internal',
+                        position: 'before'
+                    },
+                ],
+                'warnOnUnassignedImports': true
+            }
+        ]
     },
     overrides: [{
         files: ['*.ts', '*.tsx'],
