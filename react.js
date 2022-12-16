@@ -1,5 +1,8 @@
 const {OFF, WARNING, ERROR} = require('./constants');
 
+const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
+const styleFiles = '*.{css,sass,scss,less,styl}';
+
 module.exports = {
     extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
     plugins: ['react', 'react-hooks', 'import'],
@@ -38,7 +41,7 @@ module.exports = {
                         position: 'before'
                     },
                     {
-                        pattern: '*.{svg,png,jpg,jpeg,json}',
+                        pattern: assetFiles,
                         patternOptions: {
                             dot: true,
                             nocomment: true,
@@ -48,7 +51,7 @@ module.exports = {
                         position: 'after'
                     },
                     {
-                        pattern: '*.{css,scss}',
+                        pattern: styleFiles,
                         patternOptions: {
                             dot: true,
                             nocomment: true,
@@ -59,8 +62,8 @@ module.exports = {
                     }
                 ],
                 'pathGroupsExcludedImportTypes': [
-                    '*.{css,scss}',
-                    '*.{svg,png,jpg,jpeg,json}',
+                    assetFiles,
+                    styleFiles,
                     'react'
                 ],
                 'warnOnUnassignedImports': true
