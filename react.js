@@ -1,8 +1,8 @@
-const {OFF, WARNING} = require('./constants');
+const {OFF, WARNING, ERROR} = require('./constants');
 
 module.exports = {
     extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
-    plugins: ['react', 'react-hooks'],
+    plugins: ['react', 'react-hooks', 'import'],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
@@ -14,6 +14,58 @@ module.exports = {
     rules: {
         'react/prop-types': WARNING,
         'react/sort-comp': WARNING,
+
+        // Additional Plugins
+        'import/order': [
+            ERROR,
+            {
+                'alphabetize': {
+                    order: 'asc'
+                },
+                'newlines-between': 'always',
+                'groups': [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index'
+                ],
+                'pathGroups': [
+                    {
+                        pattern: 'react',
+                        group: 'external',
+                        position: 'before'
+                    },
+                    {
+                        pattern: '*.{svg,png,jpg,jpeg,json}',
+                        patternOptions: {
+                            dot: true,
+                            nocomment: true,
+                            matchBase: true
+                        },
+                        group: 'type',
+                        position: 'after'
+                    },
+                    {
+                        pattern: '*.{css,scss}',
+                        patternOptions: {
+                            dot: true,
+                            nocomment: true,
+                            matchBase: true
+                        },
+                        group: 'type',
+                        position: 'after'
+                    }
+                ],
+                'pathGroupsExcludedImportTypes': [
+                    '*.{css,scss}',
+                    '*.{svg,png,jpg,jpeg,json}',
+                    'react'
+                ],
+                'warnOnUnassignedImports': true
+            }
+        ]
     },
     settings: {
         react: {
