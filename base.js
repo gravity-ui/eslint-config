@@ -88,6 +88,9 @@ module.exports = {
         'no-new-object': WARNING,
         'no-restricted-syntax': [ERROR, 'WithStatement'],
         'no-unneeded-ternary': ERROR,
+        'sort-imports': [ERROR, {
+            ignoreDeclarationSort: true
+        }],
 
         // ECMAStrict 6
         'no-duplicate-imports': ERROR,
