@@ -48,7 +48,7 @@ module.exports = {
                         position: 'after'
                     },
                     {
-                        pattern: '*.{css,scss}',
+                        pattern: '*.{css,sass,scss,less,styl}',
                         patternOptions: {
                             dot: true,
                             nocomment: true,
