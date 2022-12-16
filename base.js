@@ -117,13 +117,6 @@ module.exports = {
                     'sibling',
                     'index'
                 ],
-                'pathGroups': [
-                    {
-                        pattern: 'shared/**',
-                        group: 'internal',
-                        position: 'before'
-                    },
-                ],
                 'warnOnUnassignedImports': true
             }
         ]

@@ -38,11 +38,6 @@ module.exports = {
                         position: 'before'
                     },
                     {
-                        pattern: 'shared/**',
-                        group: 'internal',
-                        position: 'before'
-                    },
-                    {
                         pattern: '*.{svg,png,jpg,jpeg,json}',
                         patternOptions: {
                             dot: true,
