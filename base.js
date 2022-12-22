@@ -46,7 +46,7 @@ module.exports = {
         'no-new-func': WARNING,
         'no-new-wrappers': ERROR,
         'no-octal-escape': ERROR,
-        'no-param-reassign': WARNING,
+        'no-param-reassign': [WARNING, {props: true}],
         'no-proto': ERROR,
         'no-return-assign': [ERROR, 'always'],
         'no-script-url': ERROR,
