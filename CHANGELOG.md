@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0](https://github.com/gravity-ui/eslint-config/compare/v1.0.2...v2.0.0) (2022-12-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* add `import-order` plugin and rule ([#5](https://github.com/gravity-ui/eslint-config/issues/5))
+* add `sort-imports` rule ([#4](https://github.com/gravity-ui/eslint-config/issues/4))
+
+### Features
+
+* add `import-order` plugin and rule ([#5](https://github.com/gravity-ui/eslint-config/issues/5)) ([019d25d](https://github.com/gravity-ui/eslint-config/commit/019d25d18cf2ad907d917aa65d842c546fa8bb7c))
+* add `sort-imports` rule ([#4](https://github.com/gravity-ui/eslint-config/issues/4)) ([0366bdc](https://github.com/gravity-ui/eslint-config/commit/0366bdce1d81f83acb9222f9cbff538883b5bec8))
+* made 'no-param-reassign' rule stricter ([#8](https://github.com/gravity-ui/eslint-config/issues/8)) ([8091f46](https://github.com/gravity-ui/eslint-config/commit/8091f46a9aef819fa4907a565ac8571331aa6f73))
+
+
+### Bug Fixes
+
+* add more files to sort-imports rule ([#7](https://github.com/gravity-ui/eslint-config/issues/7)) ([9527126](https://github.com/gravity-ui/eslint-config/commit/9527126c472b533b5107073c0bcb0a164f9deb9c))
+
 ## [1.0.2](https://github.com/gravity-ui/eslint-config/compare/v1.0.1...v1.0.2) (2022-08-24)
 
 
