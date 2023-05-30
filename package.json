@@ -9,6 +9,7 @@
   "license": "MIT",
   "main": "index.js",
   "files": [
+    "a11y.js",
     "base.js",
     "client.js",
     "react.js",
