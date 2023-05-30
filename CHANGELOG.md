@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/gravity-ui/eslint-config/compare/v2.1.0...v2.1.1) (2023-05-30)
+
+
+### Bug Fixes
+
+* **a11y:** add missing file ([#11](https://github.com/gravity-ui/eslint-config/issues/11)) ([37eafc8](https://github.com/gravity-ui/eslint-config/commit/37eafc8f1275656e852d832ce0c4ef933346b003))
+
 ## [2.1.0](https://github.com/gravity-ui/eslint-config/compare/v2.0.0...v2.1.0) (2023-05-30)
 
 
