@@ -44,7 +44,7 @@ If accessibility of your interface is important to you, then you can use this co
 
 ```json
 {
-    "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/prettier"],
+    "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/a11y"],
     "root": true
 }
 ```
