@@ -38,3 +38,13 @@ If you are using Prettier, extend root config with the additional rules:
     "root": true
 }
 ```
+
+### a11y
+If you want to spot accessibility issues, extend root config with the additional rules:
+
+```json
+{
+    "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/a11y"],
+    "root": true
+}
+```
