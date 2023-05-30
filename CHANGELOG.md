@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/gravity-ui/eslint-config/compare/v2.0.0...v2.1.0) (2023-05-30)
+
+
+### Features
+
+* **a11y:** add eslint-plugin-jsx-a11y plugin ([#9](https://github.com/gravity-ui/eslint-config/issues/9)) ([c71fd18](https://github.com/gravity-ui/eslint-config/commit/c71fd18ac618b1450d200821659a751d1f1538a5))
+
 ## [2.0.0](https://github.com/gravity-ui/eslint-config/compare/v1.0.2...v2.0.0) (2022-12-22)
 
 
