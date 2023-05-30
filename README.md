@@ -40,7 +40,7 @@ If you are using Prettier, extend root config with the additional rules:
 ```
 
 ### a11y
-If accessibility of your interface is important to you, then you can use this config:
+If you want to spot accessibility issues, extend root config with the additional rules::
 
 ```json
 {
