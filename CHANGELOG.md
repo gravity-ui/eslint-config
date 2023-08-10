@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.2.0](https://github.com/gravity-ui/eslint-config/compare/v2.1.1...v2.2.0) (2023-08-10)
+
+
+### Features
+
+* enable pre-pr lint ([#15](https://github.com/gravity-ui/eslint-config/issues/15)) ([f99fdee](https://github.com/gravity-ui/eslint-config/commit/f99fdee32f4823803f110ada188fa4d5adb955fd))
+* update node version ([#14](https://github.com/gravity-ui/eslint-config/issues/14)) ([6a0f632](https://github.com/gravity-ui/eslint-config/commit/6a0f63223420cbf55a08b4a43ae5c4108bcf7aeb))
+* update outdated typescript plugin ([#13](https://github.com/gravity-ui/eslint-config/issues/13)) ([fd6c1cd](https://github.com/gravity-ui/eslint-config/commit/fd6c1cdf7050235ef540bc8f31b112210540c4a3))
+
 ## [2.1.1](https://github.com/gravity-ui/eslint-config/compare/v2.1.0...v2.1.1) (2023-05-30)
 
 
