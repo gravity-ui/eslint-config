@@ -8,7 +8,7 @@ module.exports = {
     plugins: ['react', 'react-hooks', 'import'],
     parserOptions: {
         ecmaFeatures: {
-            jsx: true
+            jsx: true,
         },
         babelOptions: {
             presets: ['@babel/preset-react'],
@@ -22,73 +22,67 @@ module.exports = {
         'import/order': [
             ERROR,
             {
-                'alphabetize': {
-                    order: 'asc'
+                alphabetize: {
+                    order: 'asc',
                 },
                 'newlines-between': 'always',
-                'groups': [
-                    'builtin',
-                    'external',
-                    'internal',
-                    'parent',
-                    'sibling',
-                    'index'
-                ],
-                'pathGroups': [
+                groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+                pathGroups: [
                     {
                         pattern: 'react',
                         group: 'external',
-                        position: 'before'
+                        position: 'before',
                     },
                     {
                         pattern: assetFiles,
                         patternOptions: {
                             dot: true,
                             nocomment: true,
-                            matchBase: true
+                            matchBase: true,
                         },
                         group: 'type',
-                        position: 'after'
+                        position: 'after',
                     },
                     {
                         pattern: styleFiles,
                         patternOptions: {
                             dot: true,
                             nocomment: true,
-                            matchBase: true
+                            matchBase: true,
                         },
                         group: 'type',
-                        position: 'after'
-                    }
+                        position: 'after',
+                    },
                 ],
-                'pathGroupsExcludedImportTypes': [
-                    assetFiles,
-                    styleFiles,
-                    'react'
-                ],
-                'warnOnUnassignedImports': true
-            }
-        ]
+                pathGroupsExcludedImportTypes: [assetFiles, styleFiles, 'react'],
+                warnOnUnassignedImports: true,
+            },
+        ],
     },
     settings: {
         react: {
-            version: 'detect'
-        }
+            version: 'detect',
+        },
     },
-    overrides: [{
-        files: ['*.ts', '*.tsx'],
-        rules: {
-            'react/prop-types': OFF,
-            'react/sort-comp': [WARNING, {
-                'order': [
-                    'static-variables',
-                    'static-methods',
-                    'instance-variables',
-                    'lifecycle',
-                    'render',
-                    'everything-else'
-                ]
-            }]
-        }
-    }]
+    overrides: [
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'react/prop-types': OFF,
+                'react/sort-comp': [
+                    WARNING,
+                    {
+                        order: [
+                            'static-variables',
+                            'static-methods',
+                            'instance-variables',
+                            'lifecycle',
+                            'render',
+                            'everything-else',
+                        ],
+                    },
+                ],
+            },
+        },
+    ],
 };

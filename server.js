@@ -3,7 +3,7 @@ const {WARNING, ERROR} = require('./constants');
 module.exports = {
     plugins: ['security'],
     env: {
-        node: true
+        node: true,
     },
     rules: {
         'global-require': WARNING,
@@ -17,6 +17,6 @@ module.exports = {
         'security/detect-non-literal-require': ERROR,
         'security/detect-possible-timing-attacks': ERROR,
         'security/detect-pseudoRandomBytes': ERROR,
-        'security/detect-unsafe-regex': ERROR
-    }
+        'security/detect-unsafe-regex': ERROR,
+    },
 };
