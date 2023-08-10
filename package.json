@@ -27,7 +27,8 @@
   "homepage": "https://github.com/gravity-ui/eslint-config#readme",
   "scripts": {
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@babel/core": "7.16.0",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
+    "@gravity-ui/prettier-config": "^1.0.1",
     "eslint": "8.8.0",
     "husky": "8.0.1"
   },

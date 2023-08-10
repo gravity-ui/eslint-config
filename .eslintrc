@@ -1,0 +1,7 @@
+{
+    "extends": ["./index.js",  "./prettier.js"],
+    "root": true,
+    "env": {
+        "node": true
+    }
+}
