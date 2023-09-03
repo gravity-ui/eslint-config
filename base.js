@@ -107,6 +107,7 @@ module.exports = {
         'require-yield': WARNING, // eslint:recommended
 
         'import/no-duplicates': [ERROR, {considerQueryString: true}],
+        'import/no-extraneous-dependencies': [ERROR, {includeTypes: true}],
     },
     overrides: [
         {
