@@ -97,7 +97,6 @@ module.exports = {
         ],
 
         // ECMAStrict 6
-        'no-duplicate-imports': ERROR,
         'no-useless-constructor': ERROR,
         'no-var': ERROR,
         'prefer-arrow-callback': [WARNING, {allowNamedFunctions: true}],
@@ -107,18 +106,7 @@ module.exports = {
         'require-atomic-updates': OFF, // eslint:recommended
         'require-yield': WARNING, // eslint:recommended
 
-        // Additional Plugins
-        'import/order': [
-            ERROR,
-            {
-                alphabetize: {
-                    order: 'asc',
-                },
-                'newlines-between': 'always',
-                groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-                warnOnUnassignedImports: true,
-            },
-        ],
+        'import/no-duplicates': [ERROR, {considerQueryString: true}],
     },
     overrides: [
         {
@@ -145,7 +133,6 @@ module.exports = {
 
                 // TypeScript-specific extension rules
                 'no-array-constructor': OFF,
-                'no-duplicate-imports': OFF,
                 'no-loop-func': OFF,
                 'no-redeclare': OFF,
                 'no-shadow': OFF,
@@ -154,7 +141,6 @@ module.exports = {
                 'no-use-before-define': OFF,
                 'no-useless-constructor': OFF,
                 '@typescript-eslint/no-array-constructor': WARNING,
-                '@typescript-eslint/no-duplicate-imports': ERROR,
                 '@typescript-eslint/no-loop-func': ERROR,
                 '@typescript-eslint/no-redeclare': ERROR,
                 '@typescript-eslint/no-shadow': WARNING,
@@ -211,7 +197,7 @@ module.exports = {
                 '@typescript-eslint/no-inferrable-types': ERROR,
                 '@typescript-eslint/no-namespace': ERROR,
                 '@typescript-eslint/no-non-null-assertion': WARNING,
-                '@typescript-eslint/no-parameter-properties': ERROR,
+                '@typescript-eslint/parameter-properties': ERROR,
                 '@typescript-eslint/triple-slash-reference': ERROR,
                 '@typescript-eslint/prefer-namespace-keyword': ERROR,
                 '@typescript-eslint/type-annotation-spacing': [
@@ -229,4 +215,13 @@ module.exports = {
             },
         },
     ],
+    settings: {
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
+        'import/resolver': {
+            typescript: true,
+            node: true,
+        },
+    },
 };
