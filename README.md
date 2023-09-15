@@ -59,7 +59,7 @@ if you want to enforce a convention in module import order, extend root config w
 
 ```json
 {
-  "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/order"],
+  "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/import-order"],
   "root": true
 }
 ```

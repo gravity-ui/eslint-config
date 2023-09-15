@@ -16,7 +16,7 @@
     "server.js",
     "prettier.js",
     "constants.js",
-    "order.js"
+    "import-order.js"
   ],
   "repository": {
     "type": "git",
