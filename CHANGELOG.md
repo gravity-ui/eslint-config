@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.0](https://github.com/gravity-ui/eslint-config/compare/v2.2.0...v3.0.0) (2023-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* support typescript v5 and prettier v3, order imports is optional ([#18](https://github.com/gravity-ui/eslint-config/issues/18))
+
+### Features
+
+* add 'import/no-extraneous-dependencies' rule ([#17](https://github.com/gravity-ui/eslint-config/issues/17)) ([0bc3163](https://github.com/gravity-ui/eslint-config/commit/0bc3163569a716ec6294ac60b1a0ab1ee0e1a368))
+* support typescript v5 and prettier v3, order imports is optional ([#18](https://github.com/gravity-ui/eslint-config/issues/18)) ([e68fc37](https://github.com/gravity-ui/eslint-config/commit/e68fc370ab1dd49b181c80c3dc68f35ab6f38781))
+
 ## [2.2.0](https://github.com/gravity-ui/eslint-config/compare/v2.1.1...v2.2.0) (2023-08-10)
 
 
