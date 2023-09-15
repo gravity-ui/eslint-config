@@ -1,5 +1,5 @@
 {
-    "extends": ["./index.js",  "./order.js", "./prettier.js"],
+    "extends": ["./index.js",  "./import-order.js", "./prettier.js"],
     "root": true,
     "env": {
         "node": true
