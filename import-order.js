@@ -51,6 +51,7 @@ module.exports = {
                 disallowTypeAnnotations: false,
             },
         ],
+        // To avoid imports split from `@typescript-eslint/consistent-type-imports` auto-fix
         '@typescript-eslint/no-import-type-side-effects': 'error',
     },
 };
