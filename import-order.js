@@ -44,14 +44,5 @@ module.exports = {
                 warnOnUnassignedImports: true,
             },
         ],
-        '@typescript-eslint/consistent-type-imports': [
-            'error',
-            {
-                fixStyle: 'inline-type-imports',
-                disallowTypeAnnotations: false,
-            },
-        ],
-        // To avoid imports split from `@typescript-eslint/consistent-type-imports` auto-fix
-        '@typescript-eslint/no-import-type-side-effects': 'error',
     },
 };
