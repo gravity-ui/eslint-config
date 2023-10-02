@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/gravity-ui/eslint-config/compare/v3.1.0...v3.1.1) (2023-10-02)
+
+
+### Bug Fixes
+
+* revert "add consistent-type-imports rule ([#22](https://github.com/gravity-ui/eslint-config/issues/22))" ([#24](https://github.com/gravity-ui/eslint-config/issues/24)) ([ed5f6c2](https://github.com/gravity-ui/eslint-config/commit/ed5f6c267a5fbcdfdc135260a29240a0da52cc42))
+
 ## [3.1.0](https://github.com/gravity-ui/eslint-config/compare/v3.0.0...v3.1.0) (2023-10-02)
 
 
