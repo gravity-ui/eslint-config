@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.2.0](https://github.com/gravity-ui/eslint-config/compare/v3.1.1...v3.2.0) (2024-04-15)
+
+
+### Features
+
+* bump deps ([#27](https://github.com/gravity-ui/eslint-config/issues/27)) ([f744d2d](https://github.com/gravity-ui/eslint-config/commit/f744d2d17b01b883a3dc82faa5c40cf0ac9f68f8))
+
 ## [3.1.1](https://github.com/gravity-ui/eslint-config/compare/v3.1.0...v3.1.1) (2023-10-02)
 
 
