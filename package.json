@@ -53,13 +53,13 @@
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
     "@gravity-ui/prettier-config": "^1.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.9.0",
     "husky": "^8.0.3",
     "nano-staged": "^0.8.0",
     "prettier": "^3.2.5"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0",
+    "eslint": "^9.0.0",
     "prettier": "^3.0.0"
   },
   "peerDependenciesMeta": {
