@@ -35,9 +35,9 @@
     "prettier": "prettier '**/*.{md,yaml,yml,json}'"
   },
   "dependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.25.9",
     "@babel/eslint-parser": "^7.25.9",
-    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-react": "^7.25.9",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "eslint-config-prettier": "^9.1.0",
