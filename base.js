@@ -151,6 +151,7 @@ module.exports = {
                     {
                         argsIgnorePattern: '^_',
                         varsIgnorePattern: '^_',
+                        caughtErrorsIgnorePattern: '^_'
                     },
                 ],
                 '@typescript-eslint/no-use-before-define': [WARNING, {functions: false}],
