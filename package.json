@@ -50,13 +50,13 @@
     "eslint-plugin-security": "^3.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.2",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@gravity-ui/prettier-config": "^1.1.0",
-    "eslint": "^9.9.0",
-    "husky": "^8.0.3",
+    "eslint": "^9.21.0",
+    "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "^3.2.5"
+    "prettier": "^3.5.3"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
