@@ -1,9 +1,15 @@
-module.exports = {
-    extends: ['./react'],
-    parserOptions: {
-        sourceType: 'module',
+const globals = require('globals');
+
+const react = require('./react');
+
+module.exports = [
+    ...react,
+    {
+        languageOptions: {
+            globals: {
+                ...globals.browser,
+            },
+            sourceType: 'module',
+        },
     },
-    env: {
-        browser: true,
-    },
-};
+];

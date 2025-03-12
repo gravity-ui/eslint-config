@@ -2,22 +2,15 @@ const babelParser = require('@babel/eslint-parser');
 const eslint = require('@eslint/js');
 const typescriptPlugin = require('@typescript-eslint/eslint-plugin');
 const typescriptParser = require('@typescript-eslint/parser');
-const importPlugin = require('eslint-plugin-import-x');
+const importPlugin = require('eslint-plugin-import');
+const jsdoc = require('eslint-plugin-jsdoc');
 const globals = require('globals');
-
-// Импортируем только правила jsdoc, без полного плагина
-//const jsdocRules = require('eslint-plugin-jsdoc').rules;
 
 const {OFF, WARNING, ERROR} = require('./constants');
 
-/** @type {import('eslint').Linter.Config[]} */
 const baseConfig = [
-    // Базовые рекомендуемые правила ESLint
     eslint.configs.recommended,
-
-    // Глобальная конфигурация для JS и JSX файлов
     {
-        files: ['**/*.js', '**/*.jsx'],
         languageOptions: {
             parser: babelParser,
             parserOptions: {
@@ -31,6 +24,7 @@ const baseConfig = [
         },
         plugins: {
             import: importPlugin,
+            jsdoc,
         },
         settings: {
             'import/resolver': {
@@ -41,10 +35,9 @@ const baseConfig = [
             // Possible Errors
             'no-empty': OFF, // eslint:recommended
 
-            /* JSDocs specific - объявляем правила напрямую
-      'jsdoc/require-param-description': WARNING,
-      'jsdoc/require-returns-description': WARNING,
-      */
+            // jsdoc
+            'jsdoc/require-param-description': WARNING,
+            'jsdoc/require-returns-description': WARNING,
 
             // Best Practices
             'array-callback-return': ERROR,
@@ -56,7 +49,7 @@ const baseConfig = [
             eqeqeq: [WARNING, 'always'],
             'guard-for-in': ERROR,
             'no-caller': ERROR,
-            'no-console': WARNING,
+            'no-console': ERROR,
             'no-div-regex': WARNING,
             'no-eq-null': ERROR,
             'no-eval': WARNING,
@@ -140,28 +133,15 @@ const baseConfig = [
             'import/no-extraneous-dependencies': [ERROR, {includeTypes: true}],
         },
     },
-
-    // Конфигурация для TypeScript файлов
     {
         files: ['**/*.ts', '**/*.tsx'],
         languageOptions: {
             parser: typescriptParser,
-            parserOptions: {
-                project: './tsconfig.json', // Убедитесь, что этот путь правильный
-            },
         },
         plugins: {
             '@typescript-eslint': typescriptPlugin,
             import: importPlugin,
-        },
-        settings: {
-            'import/parsers': {
-                '@typescript-eslint/parser': ['.ts', '.tsx'],
-            },
-            'import/resolver': {
-                typescript: true,
-                node: true,
-            },
+            jsdoc,
         },
         rules: {
             // TypeScript compiler handles these on its own
@@ -169,12 +149,11 @@ const baseConfig = [
             'no-undef': OFF,
             'no-dupe-class-members': OFF,
 
-            /* JSDocs
-      'jsdoc/require-returns-type': WARNING,
-      'jsdoc/require-param-type': WARNING,
-      'jsdoc/require-param-description': WARNING,
-      'jsdoc/require-returns-description': WARNING,
-      */
+            // jsdoc
+            'jsdoc/require-returns-type': WARNING,
+            'jsdoc/require-param-type': WARNING,
+            'jsdoc/require-param-description': WARNING,
+            'jsdoc/require-returns-description': WARNING,
 
             // TypeScript-specific extension rules
             'no-array-constructor': OFF,
@@ -195,6 +174,7 @@ const baseConfig = [
                 {
                     argsIgnorePattern: '^_',
                     varsIgnorePattern: '^_',
+                    caughtErrorsIgnorePattern: '^_',
                 },
             ],
             '@typescript-eslint/no-use-before-define': [WARNING, {functions: false}],
@@ -257,6 +237,17 @@ const baseConfig = [
                     },
                 },
             ],
+        },
+    },
+    {
+        settings: {
+            'import/parsers': {
+                '@typescript-eslint/parser': ['.ts', '.tsx'],
+            },
+            'import/resolver': {
+                typescript: true,
+                node: true,
+            },
         },
     },
 ];
