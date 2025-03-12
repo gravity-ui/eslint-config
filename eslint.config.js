@@ -1,34 +1,24 @@
-// .eslintrc
-// {
-//     "extends": ["./index.js",  "./import-order.js", "./prettier.js"],
-//     "root": true,
-//     "env": {
-//         "node": true
-//     }
-// }
+//const eslintrc = require('@eslint/eslintrc');
+//const js = require('@eslint/js');
 const globals = require('globals');
 
-const index = require('./index');
-const importOrder = require('./import-order');
-const prettier = require('./prettier');
-// import path from 'node:path';
-// import {fileURLToPath} from 'node:url';
-// import js from '@eslint/js';
-// import {FlatCompat} from '@eslint/eslintrc';
+const importConfig = require('./import-order.js');
+const prettierConfig = require('./prettier.js');
 
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-// const compat = new FlatCompat({
-//     baseDirectory: __dirname,
-//     recommendedConfig: js.configs.recommended,
-//     allConfig: js.configs.all,
-// });
+const mainConfig = require('./index.js');
+
+/*
+const compat = new eslintrc.FlatCompat({
+    baseDirectory: __dirname,
+    recommendedConfig: js.configs.recommended,
+    allConfig: js.configs.all,
+});
+*/
 
 module.exports = [
-    // ...compat.extends('./index.js', './import-order.js', './prettier.js'),
-    ...index,
-    importOrder,
-    ...prettier,
+    ...mainConfig,
+    ...importConfig,
+    ...prettierConfig,
     {
         languageOptions: {
             globals: {

@@ -1,17 +1,23 @@
 const babelParser = require('@babel/eslint-parser');
 const eslint = require('@eslint/js');
-const pluginImportX = require('eslint-plugin-import-x');
-const jsdoc = require('eslint-plugin-jsdoc');
+const typescriptPlugin = require('@typescript-eslint/eslint-plugin');
+const typescriptParser = require('@typescript-eslint/parser');
+const importPlugin = require('eslint-plugin-import-x');
 const globals = require('globals');
-const tseslint = require('typescript-eslint');
+
+// Импортируем только правила jsdoc, без полного плагина
+//const jsdocRules = require('eslint-plugin-jsdoc').rules;
 
 const {OFF, WARNING, ERROR} = require('./constants');
 
-module.exports = tseslint.config(
+/** @type {import('eslint').Linter.Config[]} */
+const baseConfig = [
+    // Базовые рекомендуемые правила ESLint
     eslint.configs.recommended,
-    ...tseslint.configs.recommended,
-    jsdoc.configs['flat/recommended'],
+
+    // Глобальная конфигурация для JS и JSX файлов
     {
+        files: ['**/*.js', '**/*.jsx'],
         languageOptions: {
             parser: babelParser,
             parserOptions: {
@@ -24,12 +30,21 @@ module.exports = tseslint.config(
             },
         },
         plugins: {
-            import: pluginImportX,
-            jsdoc,
+            import: importPlugin,
+        },
+        settings: {
+            'import/resolver': {
+                node: true,
+            },
         },
         rules: {
             // Possible Errors
             'no-empty': OFF, // eslint:recommended
+
+            /* JSDocs specific - объявляем правила напрямую
+      'jsdoc/require-param-description': WARNING,
+      'jsdoc/require-returns-description': WARNING,
+      */
 
             // Best Practices
             'array-callback-return': ERROR,
@@ -120,10 +135,56 @@ module.exports = tseslint.config(
             'require-atomic-updates': OFF, // eslint:recommended
             'require-yield': WARNING, // eslint:recommended
 
+            // Import plugin
             'import/no-duplicates': [ERROR, {considerQueryString: true}],
             'import/no-extraneous-dependencies': [ERROR, {includeTypes: true}],
+        },
+    },
 
-            // TypeScript
+    // Конфигурация для TypeScript файлов
+    {
+        files: ['**/*.ts', '**/*.tsx'],
+        languageOptions: {
+            parser: typescriptParser,
+            parserOptions: {
+                project: './tsconfig.json', // Убедитесь, что этот путь правильный
+            },
+        },
+        plugins: {
+            '@typescript-eslint': typescriptPlugin,
+            import: importPlugin,
+        },
+        settings: {
+            'import/parsers': {
+                '@typescript-eslint/parser': ['.ts', '.tsx'],
+            },
+            'import/resolver': {
+                typescript: true,
+                node: true,
+            },
+        },
+        rules: {
+            // TypeScript compiler handles these on its own
+            strict: OFF,
+            'no-undef': OFF,
+            'no-dupe-class-members': OFF,
+
+            /* JSDocs
+      'jsdoc/require-returns-type': WARNING,
+      'jsdoc/require-param-type': WARNING,
+      'jsdoc/require-param-description': WARNING,
+      'jsdoc/require-returns-description': WARNING,
+      */
+
+            // TypeScript-specific extension rules
+            'no-array-constructor': OFF,
+            'no-loop-func': OFF,
+            'no-redeclare': OFF,
+            'no-shadow': OFF,
+            'no-unused-expressions': OFF,
+            'no-unused-vars': OFF,
+            'no-use-before-define': OFF,
+            'no-useless-constructor': OFF,
             '@typescript-eslint/no-array-constructor': WARNING,
             '@typescript-eslint/no-loop-func': ERROR,
             '@typescript-eslint/no-redeclare': ERROR,
@@ -198,51 +259,6 @@ module.exports = tseslint.config(
             ],
         },
     },
-);
+];
 
-// {
-//     overrides: [
-//         {
-//             files: ['*.ts', '*.tsx'],
-//             parser: '@typescript-eslint/parser',
-//             plugins: ['@typescript-eslint'],
-//             rules: {
-//                 // TypeScript compiler handles these on its own
-//                 strict: OFF,
-//                 'no-undef': OFF,
-//                 'no-dupe-class-members': OFF,
-
-//                 'valid-jsdoc': [
-//                     WARNING,
-//                     {
-//                         // type annotations are redundant when in TS files
-//                         requireReturnType: false,
-//                         requireParamType: false,
-//                         // same as for JS
-//                         requireParamDescription: false,
-//                         requireReturnDescription: false,
-//                     },
-//                 ],
-
-//                 // TypeScript-specific extension rules
-//                 'no-array-constructor': OFF,
-//                 'no-loop-func': OFF,
-//                 'no-redeclare': OFF,
-//                 'no-shadow': OFF,
-//                 'no-unused-expressions': OFF,
-//                 'no-unused-vars': OFF,
-//                 'no-use-before-define': OFF,
-//                 'no-useless-constructor': OFF,
-//         },
-//     },
-// ],
-// settings: {
-//     'import/parsers': {
-//         '@typescript-eslint/parser': ['.ts', '.tsx'],
-//     },
-//     'import/resolver': {
-//         typescript: true,
-//         node: true,
-//     },
-// },
-// };
+module.exports = baseConfig;

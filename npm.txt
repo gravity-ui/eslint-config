@@ -1,0 +1,31 @@
+
+> @gravity-ui/eslint-config@3.2.0 lint
+> npm run lint:js && npm run lint:other
+
+
+> @gravity-ui/eslint-config@3.2.0 lint:js
+> eslint . --report-unused-disable-directives
+
+
+/Users/chelentos/eslint-config/base.js
+  5:26  error  `@typescript-eslint/parser` import should occur before import of `eslint-plugin-import-x`         import/order
+  6:26  error  There should be no empty line within import group                                                 import/order
+  6:26  error  `@typescript-eslint/eslint-plugin` import should occur before import of `eslint-plugin-import-x`  import/order
+  9:7   error  'jsdocRules' is assigned a value but never used                                                   no-unused-vars
+  9:20  error  `eslint-plugin-jsdoc` import should occur before import of `globals`                              import/order
+
+/Users/chelentos/eslint-config/eslint.config.js
+   5:20  error  There should be at least one empty line between import groups     import/order
+   5:20  error  `./index.js` import should occur after import of `./prettier.js`  import/order
+   9:7   error  'compat' is assigned a value but never used                       no-unused-vars
+  26:3   error  Insert `⏎`                                                        prettier/prettier
+
+/Users/chelentos/eslint-config/test/file.ts
+  0:0  error  Parsing error: error TS5012: Cannot read file '/Users/chelentos/eslint-config/tsconfig.json': ENOENT: no such file or directory, open '/Users/chelentos/eslint-config/tsconfig.json'
+
+/Users/chelentos/eslint-config/test/index.ts
+  0:0  error  Parsing error: error TS5012: Cannot read file '/Users/chelentos/eslint-config/tsconfig.json': ENOENT: no such file or directory, open '/Users/chelentos/eslint-config/tsconfig.json'
+
+✖ 11 problems (11 errors, 0 warnings)
+  5 errors and 0 warnings potentially fixable with the `--fix` option.
+

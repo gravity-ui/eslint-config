@@ -35,25 +35,28 @@
     "prettier": "prettier '**/*.{md,yaml,yml,json}'"
   },
   "dependencies": {
-    "@babel/core": "^7.25.9",
-    "@babel/eslint-parser": "^7.25.9",
-    "@babel/preset-react": "^7.25.9",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
+    "@babel/core": "^7.26.9",
+    "@babel/eslint-parser": "^7.26.8",
+    "@babel/preset-react": "^7.26.3",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.3",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-jsdoc": "^50.6.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-security": "^3.0.1"
+    "eslint-plugin-security": "^3.0.1",
+    "typescript-eslint": "^8.24.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
+    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.22.0",
     "@gravity-ui/prettier-config": "^1.1.0",
     "eslint": "^9.21.0",
+    "globals": "^16.0.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.3"
