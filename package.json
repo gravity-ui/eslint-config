@@ -30,7 +30,7 @@
     "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "npm run lint:js && npm run lint:other",
-    "lint:js": "eslint . --report-unused-disable-directives",
+    "lint:js": "eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file",
     "lint:other": "npm run prettier -- --check",
     "prettier": "prettier '**/*.{md,yaml,yml,json}'"
   },
@@ -61,7 +61,8 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "react": "^19.0.0"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",

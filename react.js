@@ -17,10 +17,6 @@ module.exports = [
                 },
             },
         },
-        rules: {
-            'react/prop-types': WARNING,
-            'react/sort-comp': WARNING,
-        },
         settings: {
             react: {
                 version: 'detect',
@@ -29,9 +25,6 @@ module.exports = [
     },
     {
         files: ['*.ts', '*.tsx'],
-        plugins: {
-            react,
-        },
         rules: {
             'react/prop-types': OFF,
             'react/sort-comp': [
