@@ -49,7 +49,7 @@ const baseConfig = [
             eqeqeq: [WARNING, 'always'],
             'guard-for-in': ERROR,
             'no-caller': ERROR,
-            'no-console': ERROR,
+            'no-console': [ERROR, {allow: ['info', 'warn', 'error']}],
             'no-div-regex': WARNING,
             'no-eq-null': ERROR,
             'no-eval': WARNING,
