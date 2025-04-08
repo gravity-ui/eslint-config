@@ -1,11 +1,11 @@
 const {ERROR} = require('./constants');
 
 module.exports = {
-    plugins: ['code-security'],
+    plugins: ['code-security', 'security-node'],
     env: {
         node: true,
     },
     rules: {
-        'code-security/no-open-redirect': ERROR,
+        'security-node/detect-dangerous-redirects': ERROR,
     },
 };
