@@ -1,7 +1,7 @@
 const {ERROR} = require('./constants');
 
 module.exports = {
-    plugins: ['code-security', 'security-node'],
+    plugins: ['security-node'],
     env: {
         node: true,
     },
