@@ -1,8 +1,8 @@
-const globals = require('globals');
+import globals from 'globals';
 
-const react = require('./react');
+import react from './react.js';
 
-module.exports = [
+export default [
     ...react,
     {
         languageOptions: {

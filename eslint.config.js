@@ -1,11 +1,11 @@
-const globals = require('globals');
+import globals from 'globals';
 
-const importConfig = require('./import-order.js');
-const prettierConfig = require('./prettier.js');
+import importConfig from './import-order.js';
+import prettierConfig from './prettier.js';
 
-const mainConfig = require('./index.js');
+import mainConfig from './index.js';
 
-module.exports = [
+export default [
     ...mainConfig,
     importConfig,
     prettierConfig,
@@ -14,6 +14,12 @@ module.exports = [
             globals: {
                 ...globals.node,
             },
+        },
+    },
+    {
+        files: ['*.ts', '*.tsx'],
+        rules: {
+            '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         },
     },
 ];

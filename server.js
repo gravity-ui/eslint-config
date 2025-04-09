@@ -1,16 +1,16 @@
-const security = require('eslint-plugin-security');
-const globals = require('globals');
+import securityPlugin from 'eslint-plugin-security';
+import globals from 'globals';
 
-const {WARNING, ERROR} = require('./constants');
+import {ERROR, WARNING} from './constants.js';
 
-module.exports = {
+export default {
     languageOptions: {
         globals: {
             ...globals.node,
         },
     },
     plugins: {
-        security,
+        security: securityPlugin,
     },
     rules: {
         'global-require': WARNING,

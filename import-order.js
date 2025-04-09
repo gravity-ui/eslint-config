@@ -1,9 +1,9 @@
-const {ERROR} = require('./constants');
+import {ERROR} from './constants.js';
 
 const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
 const styleFiles = '*.{css,sass,scss,less,styl}';
 
-module.exports = {
+export default {
     rules: {
         'import/order': [
             ERROR,

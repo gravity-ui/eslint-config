@@ -1,30 +1,31 @@
-const babelParser = require('@babel/eslint-parser');
-const eslint = require('@eslint/js');
-const typescriptPlugin = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
-const importPlugin = require('eslint-plugin-import');
-const jsdoc = require('eslint-plugin-jsdoc');
-const globals = require('globals');
+import babelParser from '@babel/eslint-parser';
+import eslintPlugin from '@eslint/js';
+import typescriptPlugin from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import importPlugin from 'eslint-plugin-import';
+import jsdocPlugin from 'eslint-plugin-jsdoc';
+import globals from 'globals';
 
-const {OFF, WARNING, ERROR} = require('./constants');
+import {ERROR, OFF, WARNING} from './constants.js';
 
 const baseConfig = [
-    eslint.configs.recommended,
+    eslintPlugin.configs.recommended,
+    jsdocPlugin.configs['flat/recommended'],
     {
         languageOptions: {
             parser: babelParser,
             parserOptions: {
-                ecmaVersion: 2019,
+                ecmaVersion: 2022,
                 requireConfigFile: false,
             },
             globals: {
-                ...globals.es2015,
+                ...globals.es2017,
                 ...globals['shared-node-browser'],
             },
         },
         plugins: {
             import: importPlugin,
-            jsdoc,
+            jsdoc: jsdocPlugin,
         },
         settings: {
             'import/resolver': {
@@ -36,8 +37,9 @@ const baseConfig = [
             'no-empty': OFF, // eslint:recommended
 
             // jsdoc
-            'jsdoc/require-param-description': WARNING,
-            'jsdoc/require-returns-description': WARNING,
+            'jsdoc/require-jsdoc': OFF,
+            'jsdoc/require-param-description': OFF,
+            'jsdoc/require-returns-description': OFF,
 
             // Best Practices
             'array-callback-return': ERROR,
@@ -141,7 +143,7 @@ const baseConfig = [
         plugins: {
             '@typescript-eslint': typescriptPlugin,
             import: importPlugin,
-            jsdoc,
+            jsdoc: jsdocPlugin,
         },
         rules: {
             // TypeScript compiler handles these on its own
@@ -150,10 +152,11 @@ const baseConfig = [
             'no-dupe-class-members': OFF,
 
             // jsdoc
-            'jsdoc/require-returns-type': WARNING,
-            'jsdoc/require-param-type': WARNING,
-            'jsdoc/require-param-description': WARNING,
-            'jsdoc/require-returns-description': WARNING,
+            'jsdoc/require-jsdoc': OFF,
+            'jsdoc/require-returns-type': OFF,
+            'jsdoc/require-param-type': OFF,
+            'jsdoc/require-param-description': OFF,
+            'jsdoc/require-returns-description': OFF,
 
             // TypeScript-specific extension rules
             'no-array-constructor': OFF,
@@ -252,4 +255,4 @@ const baseConfig = [
     },
 ];
 
-module.exports = baseConfig;
+export default baseConfig;

@@ -1,11 +1,11 @@
-const react = require('eslint-plugin-react');
-const reactHooks = require('eslint-plugin-react-hooks');
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
-const {OFF, WARNING} = require('./constants');
+import {OFF, WARNING} from './constants.js';
 
-module.exports = [
-    react.configs.flat.recommended,
-    reactHooks.configs['recommended-latest'],
+export default [
+    reactPlugin.configs.flat.recommended,
+    reactHooksPlugin.configs['recommended-latest'],
     {
         languageOptions: {
             parserOptions: {

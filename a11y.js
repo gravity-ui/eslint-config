@@ -1,13 +1,13 @@
-const jsxA11y = require('eslint-plugin-jsx-a11y');
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-module.exports = {
-    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
-    plugins: {
-        'jsx-a11y': jsxA11y,
-    },
-    parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
+export default {
+    ...jsxA11yPlugin.flatConfigs.recommended,
+    languageOptions: {
+        ...jsxA11yPlugin.flatConfigs.recommended.languageOptions,
+        parserOptions: {
+            ecmaFeatures: {
+                jsx: true,
+            },
         },
     },
 };
