@@ -1,5 +1,3 @@
-module.exports = {
-    OFF: 0,
-    WARNING: 1,
-    ERROR: 2,
-};
+export const OFF = 0;
+export const WARNING = 1;
+export const ERROR = 2;
