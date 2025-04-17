@@ -23,7 +23,6 @@ export default [
         },
         plugins: {
             import: importPlugin,
-            jsdoc: jsdocPlugin,
         },
         settings: {
             'import/resolver': {
