@@ -8,58 +8,68 @@ npm install --save-dev eslint @gravity-ui/eslint-config
 
 ## Usage
 
-Add `.eslintrc` file in the project root with the following content:
+Add `eslint.config.js` file in your project with the following content:
 
-```json
-{
-  "extends": "@gravity-ui/eslint-config",
-  "root": true
-}
+```js
+import baseConfig from '@gravity-ui/eslint-config';
+
+export default [
+  ...baseConfig,
+  {
+    // ...other config
+  },
+];
 ```
 
-Add client and server config files in corresponding directories:
-
-```json
-{
-  "extends": "@gravity-ui/eslint-config/server"
-}
-```
-
-```json
-{
-  "extends": "@gravity-ui/eslint-config/client"
-}
-```
+Base config also includes TypeScript rules.
 
 ### Prettier
 
-If you are using Prettier, extend root config with the additional rules:
+If you are using Prettier, add corresponding config:
 
-```json
-{
-  "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/prettier"],
-  "root": true
-}
+```js
+import baseConfig from '@gravity-ui/eslint-config';
+import prettierConfig from '@gravity-ui/eslint-config/prettier';
+
+export default [
+  ...baseConfig,
+  ...prettierConfig,
+  {
+    // ...other config
+  },
+];
 ```
 
 ### a11y
 
-If you want to spot accessibility issues, extend root config with the additional rules:
+If you want to spot accessibility issues, add corresponding config:
 
-```json
-{
-  "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/a11y"],
-  "root": true
-}
+```js
+import baseConfig from '@gravity-ui/eslint-config';
+import a11yConfig from '@gravity-ui/eslint-config/a11y';
+
+export default [
+  ...baseConfig,
+  ...a11yConfig,
+  {
+    // ...other config
+  },
+];
 ```
 
 ### Order
 
-if you want to enforce a convention in module import order, extend root config with the additional rules:
+if you want to enforce a convention in module import order, add corresponding config:
 
-```json
-{
-  "extends": ["@gravity-ui/eslint-config", "@gravity-ui/eslint-config/import-order"],
-  "root": true
-}
+```js
+import baseConfig from '@gravity-ui/eslint-config';
+import importOrderConfig from '@gravity-ui/eslint-config/import-order';
+
+export default [
+  ...baseConfig,
+  ...importOrderConfig,
+  {
+    // ...other config
+  },
+];
 ```
