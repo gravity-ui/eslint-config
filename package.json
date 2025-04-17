@@ -27,6 +27,7 @@
     "./client": "./client.js",
     "./import-order": "./import-order.js",
     "./prettier": "./prettier.js",
+    "./react": "./react.js",
     "./server": "./server.js",
     "./typescript": "./typescript.js"
   },
