@@ -24,7 +24,7 @@ export default [
         },
     },
     {
-        files: ['*.ts', '*.tsx'],
+        files: ['**/*.ts', '**/*.tsx'],
         rules: {
             'react/prop-types': OFF,
             'react/sort-comp': [

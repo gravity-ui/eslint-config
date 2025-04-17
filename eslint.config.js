@@ -17,7 +17,7 @@ export default [
         },
     },
     {
-        files: ['*.ts', '*.tsx'],
+        files: ['**/*.ts', '**/*.tsx'],
         rules: {
             '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         },

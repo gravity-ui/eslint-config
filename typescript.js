@@ -5,9 +5,9 @@ import jsdocPlugin from 'eslint-plugin-jsdoc';
 
 import {ERROR, OFF, WARNING} from './constants.js';
 
-const tsConfig = [
+export default [
     {
-        files: ['*.ts', '*.tsx'],
+        files: ['**/*.ts', '**/*.tsx'],
         languageOptions: {
             parser: typescriptParser,
         },
@@ -125,5 +125,3 @@ const tsConfig = [
         },
     },
 ];
-
-export default tsConfig;
