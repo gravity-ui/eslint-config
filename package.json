@@ -13,19 +13,22 @@
     "a11y.js",
     "base.js",
     "client.js",
+    "constants.js",
+    "import-order.js",
+    "prettier.js",
     "react.js",
     "server.js",
-    "prettier.js",
-    "constants.js",
-    "import-order.js"
+    "typescript.js"
   ],
   "exports": {
     ".": "./index.js",
     "./a11y": "./a11y.js",
+    "./base": "./base.js",
     "./client": "./client.js",
-    "./server": "./server.js",
+    "./import-order": "./import-order.js",
     "./prettier": "./prettier.js",
-    "./import-order": "./import-order.js"
+    "./server": "./server.js",
+    "./typescript": "./typescript.js"
   },
   "repository": {
     "type": "git",

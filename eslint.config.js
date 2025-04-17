@@ -7,8 +7,8 @@ import mainConfig from './index.js';
 
 export default [
     ...mainConfig,
-    importConfig,
-    prettierConfig,
+    ...importConfig,
+    ...prettierConfig,
     {
         languageOptions: {
             globals: {

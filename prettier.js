@@ -1,3 +1,3 @@
-import prettierPlugin from 'eslint-plugin-prettier/recommended';
+import prettierConfig from 'eslint-plugin-prettier/recommended';
 
-export default prettierPlugin;
+export default [prettierConfig];

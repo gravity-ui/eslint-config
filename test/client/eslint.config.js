@@ -7,9 +7,9 @@ import prettierConfig from '../../prettier.js';
 export default [
     ...mainConfig,
     ...client,
-    a11yConfig,
-    importConfig,
-    prettierConfig,
+    ...a11yConfig,
+    ...importConfig,
+    ...prettierConfig,
     {
         rules: {
             'react-hooks/exhaustive-deps': 'error',
