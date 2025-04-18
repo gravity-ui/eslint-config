@@ -64,7 +64,6 @@ export default [
                     leadingUnderscore: 'forbid',
                 },
             ],
-            '@stylistic/ts/member-delimiter-style': ERROR,
             '@typescript-eslint/member-ordering': [
                 ERROR,
                 {
@@ -101,6 +100,9 @@ export default [
             '@typescript-eslint/parameter-properties': ERROR,
             '@typescript-eslint/triple-slash-reference': ERROR,
             '@typescript-eslint/prefer-namespace-keyword': ERROR,
+
+            // Stylistic
+            '@stylistic/ts/member-delimiter-style': ERROR,
             '@stylistic/ts/type-annotation-spacing': [
                 ERROR,
                 {
