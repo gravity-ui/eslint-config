@@ -1,3 +1,4 @@
+import stylisticTsPlugin from '@stylistic/eslint-plugin-ts';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
@@ -13,6 +14,7 @@ export default [
         },
         plugins: {
             '@typescript-eslint': typescriptPlugin,
+            '@stylistic/ts': stylisticTsPlugin,
             import: importPlugin,
             jsdoc: jsdocPlugin,
         },
@@ -62,7 +64,6 @@ export default [
                     leadingUnderscore: 'forbid',
                 },
             ],
-            '@typescript-eslint/member-delimiter-style': ERROR,
             '@typescript-eslint/member-ordering': [
                 ERROR,
                 {
@@ -99,7 +100,10 @@ export default [
             '@typescript-eslint/parameter-properties': ERROR,
             '@typescript-eslint/triple-slash-reference': ERROR,
             '@typescript-eslint/prefer-namespace-keyword': ERROR,
-            '@typescript-eslint/type-annotation-spacing': [
+
+            // Stylistic
+            '@stylistic/ts/member-delimiter-style': ERROR,
+            '@stylistic/ts/type-annotation-spacing': [
                 ERROR,
                 {
                     before: true,
