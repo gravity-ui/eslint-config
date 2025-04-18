@@ -1,5 +1,23 @@
 # Changelog
 
+## [4.0.0](https://github.com/gravity-ui/eslint-config/compare/v3.3.0...v4.0.0) (2025-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade eslint to v9 ([#36](https://github.com/gravity-ui/eslint-config/issues/36))
+
+### Features
+
+* update dependencies ([74356fb](https://github.com/gravity-ui/eslint-config/commit/74356fb60bc5cec95f599a3117d1201c815576d0))
+* upgrade eslint to v9 ([#36](https://github.com/gravity-ui/eslint-config/issues/36)) ([f5f6e0e](https://github.com/gravity-ui/eslint-config/commit/f5f6e0e60d976fc5d7ff74af789dbd382b04d524))
+
+
+### Bug Fixes
+
+* add export of react file ([edaca59](https://github.com/gravity-ui/eslint-config/commit/edaca59c283a3a1558cf10dde1866cc4e0a08017))
+* stylistic plugin added for ts style rules ([#39](https://github.com/gravity-ui/eslint-config/issues/39)) ([404981a](https://github.com/gravity-ui/eslint-config/commit/404981aea697c0824a678f6ee238c96c7760102d))
+
 ## [3.3.0](https://github.com/gravity-ui/eslint-config/compare/v3.2.0...v3.3.0) (2024-12-13)
 
 
