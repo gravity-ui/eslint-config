@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/gravity-ui/eslint-config/compare/v4.0.0...v4.0.1) (2025-04-18)
+
+
+### Bug Fixes
+
+* more tolerant jsdoc rules ([f43699c](https://github.com/gravity-ui/eslint-config/commit/f43699cfb34e581d5867652a9d487dc86dcc16fc))
+
 ## [4.0.0](https://github.com/gravity-ui/eslint-config/compare/v3.3.0...v4.0.0) (2025-04-18)
 
 
