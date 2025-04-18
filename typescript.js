@@ -26,10 +26,12 @@ export default [
 
             // jsdoc
             'jsdoc/require-jsdoc': OFF,
+            'jsdoc/require-returns': OFF,
             'jsdoc/require-returns-type': OFF,
+            'jsdoc/require-returns-description': OFF,
+            'jsdoc/require-param': OFF,
             'jsdoc/require-param-type': OFF,
             'jsdoc/require-param-description': OFF,
-            'jsdoc/require-returns-description': OFF,
 
             // TypeScript-specific extension rules
             'no-array-constructor': OFF,
