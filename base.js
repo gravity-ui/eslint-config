@@ -8,7 +8,6 @@ import {ERROR, OFF, WARNING} from './constants.js';
 
 export default [
     eslintPlugin.configs.recommended,
-    jsdocPlugin.configs['flat/recommended'],
     {
         languageOptions: {
             parser: babelParser,
@@ -23,6 +22,7 @@ export default [
         },
         plugins: {
             import: importPlugin,
+            jsdoc: jsdocPlugin,
         },
         settings: {
             'import/resolver': {
