@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/gravity-ui/eslint-config/compare/v4.0.1...v4.1.0) (2025-05-26)
+
+
+### Features
+
+* add security-node plugin ([#37](https://github.com/gravity-ui/eslint-config/issues/37)) ([8ab95e6](https://github.com/gravity-ui/eslint-config/commit/8ab95e6ac794b56018761ef7f6002ca0536b92a6))
+
 ## [4.0.1](https://github.com/gravity-ui/eslint-config/compare/v4.0.0...v4.0.1) (2025-04-18)
 
 
