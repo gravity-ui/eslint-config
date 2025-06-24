@@ -1,6 +1,6 @@
 {
   "name": "@gravity-ui/eslint-config",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Gravity UI ESLint config, following our styleguide",
   "keywords": [
     "eslint",
