@@ -1,4 +1,4 @@
-import stylisticTsPlugin from '@stylistic/eslint-plugin-ts';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
@@ -14,7 +14,7 @@ export default [
         },
         plugins: {
             '@typescript-eslint': typescriptPlugin,
-            '@stylistic/ts': stylisticTsPlugin,
+            stylistic: stylisticPlugin,
             import: importPlugin,
             jsdoc: jsdocPlugin,
         },
@@ -104,8 +104,8 @@ export default [
             '@typescript-eslint/prefer-namespace-keyword': ERROR,
 
             // Stylistic
-            '@stylistic/ts/member-delimiter-style': ERROR,
-            '@stylistic/ts/type-annotation-spacing': [
+            'stylistic/member-delimiter-style': ERROR,
+            'stylistic/type-annotation-spacing': [
                 ERROR,
                 {
                     before: true,
