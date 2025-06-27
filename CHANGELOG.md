@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/gravity-ui/eslint-config/compare/v4.1.0...v4.2.0) (2025-06-24)
+
+
+### Features
+
+* **typescript:** migrate stylistic plugin ([#42](https://github.com/gravity-ui/eslint-config/issues/42)) ([eb44487](https://github.com/gravity-ui/eslint-config/commit/eb444872c0134a47b633b326f89ce728238cb1c8))
+
 ## [4.1.0](https://github.com/gravity-ui/eslint-config/compare/v4.0.1...v4.1.0) (2025-05-26)
 
 
