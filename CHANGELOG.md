@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.1](https://github.com/gravity-ui/eslint-config/compare/v4.2.0...v4.2.1) (2026-02-19)
+
+
+### Bug Fixes
+
+* add extensions with module specifiers ([#46](https://github.com/gravity-ui/eslint-config/issues/46)) ([e2600fb](https://github.com/gravity-ui/eslint-config/commit/e2600fbafa23b8444a4da9ed4159c33e8b673696))
+
 ## [4.2.0](https://github.com/gravity-ui/eslint-config/compare/v4.1.0...v4.2.0) (2025-06-24)
 
 
