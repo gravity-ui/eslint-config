@@ -8,7 +8,7 @@ import {ERROR, OFF, WARNING} from './constants.js';
 
 export default [
     {
-        files: ['**/*.ts', '**/*.tsx'],
+        files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx', '**/*.mtsx', '**/*.ctsx'],
         languageOptions: {
             parser: typescriptParser,
         },
@@ -122,7 +122,7 @@ export default [
     {
         settings: {
             'import/parsers': {
-                '@typescript-eslint/parser': ['.ts', '.tsx'],
+                '@typescript-eslint/parser': ['.ts', '.mts', '.cts', '.tsx', '.mtsx', '.ctsx'],
             },
             'import/resolver': {
                 typescript: true,
