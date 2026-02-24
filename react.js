@@ -5,7 +5,7 @@ import {OFF, WARNING} from './constants.js';
 
 export default [
     reactPlugin.configs.flat.recommended,
-    reactHooksPlugin.configs['recommended-latest'],
+    reactHooksPlugin.configs.flat.recommended,
     {
         languageOptions: {
             parserOptions: {
