@@ -35,7 +35,7 @@
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lint:js": "eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file",
+    "lint:js": "NODE_OPTIONS='--experimental-strip-types --import ./node-helpers/register.js' eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file --flag unstable_native_nodejs_ts_config",
     "lint:prettier": "npm run prettier -- --check",
     "prettier": "prettier '**/*.{md,yaml,yml,json}'"
   },
