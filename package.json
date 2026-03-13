@@ -53,8 +53,8 @@
     "@babel/preset-react": "^7.26.3",
     "@eslint/js": "^9.23.0",
     "@stylistic/eslint-plugin": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^8.30.1",
-    "@typescript-eslint/parser": "^8.30.1",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-import-resolver-typescript": "^4.3.2",
     "eslint-plugin-import": "^2.31.0",
@@ -71,11 +71,13 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@gravity-ui/prettier-config": "^1.1.0",
+    "@gravity-ui/tsconfig": "^1.0.0",
     "eslint": "^9.24.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.3",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "prettier": "^3.0.0",

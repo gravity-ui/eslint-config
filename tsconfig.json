@@ -1,0 +1,8 @@
+{
+  "extends": "@gravity-ui/tsconfig",
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "esnext"
+  }
+}
