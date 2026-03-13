@@ -8,28 +8,20 @@
   ],
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "a11y.js",
-    "base.js",
-    "client.js",
-    "constants.js",
-    "import-order.js",
-    "prettier.js",
-    "react.js",
-    "server.js",
-    "typescript.js"
+    "lib/"
   ],
   "exports": {
-    ".": "./index.js",
-    "./a11y": "./a11y.js",
-    "./base": "./base.js",
-    "./client": "./client.js",
-    "./import-order": "./import-order.js",
-    "./prettier": "./prettier.js",
-    "./react": "./react.js",
-    "./server": "./server.js",
-    "./typescript": "./typescript.js"
+    ".": "./lib/index.js",
+    "./a11y": "./lib/configs/a11y.js",
+    "./base": "./lib/configs/base.js",
+    "./client": "./lib/configs/client.js",
+    "./import-order": "./lib/configs/import-order.js",
+    "./prettier": "./lib/configs/prettier.js",
+    "./react": "./lib/configs/react.js",
+    "./server": "./lib/configs/server.js",
+    "./typescript": "./lib/configs/typescript.js"
   },
   "repository": {
     "type": "git",
