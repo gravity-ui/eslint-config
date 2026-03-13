@@ -89,6 +89,13 @@
       "optional": true
     }
   },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": ">=22.13.0",
+      "onFail": "error"
+    }
+  },
   "nano-staged": {
     "*.{js,ts}": [
       "eslint --fix --quiet --report-unused-disable-directives"
