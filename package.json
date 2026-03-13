@@ -9,19 +9,47 @@
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib/"
   ],
   "exports": {
-    ".": "./lib/index.js",
-    "./a11y": "./lib/configs/a11y.js",
-    "./base": "./lib/configs/base.js",
-    "./client": "./lib/configs/client.js",
-    "./import-order": "./lib/configs/import-order.js",
-    "./prettier": "./lib/configs/prettier.js",
-    "./react": "./lib/configs/react.js",
-    "./server": "./lib/configs/server.js",
-    "./typescript": "./lib/configs/typescript.js"
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./a11y": {
+      "import": "./lib/configs/a11y.js",
+      "types": "./lib/configs/a11y.d.ts"
+    },
+    "./base": {
+      "import": "./lib/configs/base.js",
+      "types": "./lib/configs/base.d.ts"
+    },
+    "./client": {
+      "import": "./lib/configs/client.js",
+      "types": "./lib/configs/client.d.ts"
+    },
+    "./import-order": {
+      "import": "./lib/configs/import-order.js",
+      "types": "./lib/configs/import-order.d.ts"
+    },
+    "./prettier": {
+      "import": "./lib/configs/prettier.js",
+      "types": "./lib/configs/prettier.d.ts"
+    },
+    "./react": {
+      "import": "./lib/configs/react.js",
+      "types": "./lib/configs/react.d.ts"
+    },
+    "./server": {
+      "import": "./lib/configs/server.js",
+      "types": "./lib/configs/server.d.ts"
+    },
+    "./typescript": {
+      "import": "./lib/configs/typescript.js",
+      "types": "./lib/configs/typescript.d.ts"
+    }
   },
   "repository": {
     "type": "git",
