@@ -1,8 +1,10 @@
 {
   "extends": "@gravity-ui/tsconfig",
   "compilerOptions": {
+    "outDir": "./lib",
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "target": "esnext"
-  }
+  },
+  "include": ["**/*.ts", "**/*.js"]
 }
