@@ -1,9 +1,10 @@
+import type {Linter} from 'eslint';
 import securityPlugin from 'eslint-plugin-security';
 import globals from 'globals';
 
 import {ERROR, WARNING} from '../constants.js';
 
-export default [
+const serverConfig: Linter.Config[] = [
     {
         languageOptions: {
             globals: {
@@ -29,3 +30,5 @@ export default [
         },
     },
 ];
+
+export default serverConfig;

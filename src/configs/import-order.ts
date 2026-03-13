@@ -1,9 +1,11 @@
+import type {Linter} from 'eslint';
+
 import {ERROR} from '../constants.js';
 
 const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
 const styleFiles = '*.{css,sass,scss,less,styl}';
 
-export default [
+const importOrderConfig: Linter.Config[] = [
     {
         rules: {
             'import/order': [
@@ -48,3 +50,5 @@ export default [
         },
     },
 ];
+
+export default importOrderConfig;

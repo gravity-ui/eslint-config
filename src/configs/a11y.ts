@@ -1,6 +1,7 @@
+import type {Linter} from 'eslint';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-export default [
+const a11yConfig: Linter.Config[] = [
     {
         ...jsxA11yPlugin.flatConfigs.recommended,
         languageOptions: {
@@ -13,3 +14,5 @@ export default [
         },
     },
 ];
+
+export default a11yConfig;

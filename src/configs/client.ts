@@ -1,8 +1,9 @@
+import type {Linter} from 'eslint';
 import globals from 'globals';
 
 import react from './react.js';
 
-export default [
+const clientConfig: Linter.Config[] = [
     ...react,
     {
         languageOptions: {
@@ -13,3 +14,5 @@ export default [
         },
     },
 ];
+
+export default clientConfig;

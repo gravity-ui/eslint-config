@@ -1,18 +1,20 @@
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import type {Linter} from 'eslint';
 import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 
 import {ERROR, OFF, WARNING} from '../constants.js';
 
-export default [
+const typescriptConfig: Linter.Config[] = [
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx', '**/*.mtsx', '**/*.ctsx'],
         languageOptions: {
             parser: typescriptParser,
         },
         plugins: {
+            // @ts-expect-error some mess with types in plugin
             '@typescript-eslint': typescriptPlugin,
             stylistic: stylisticPlugin,
             import: importPlugin,
@@ -131,3 +133,5 @@ export default [
         },
     },
 ];
+
+export default typescriptConfig;
