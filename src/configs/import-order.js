@@ -1,4 +1,4 @@
-import {ERROR} from './constants.js';
+import {ERROR} from '../constants.js';
 
 const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
 const styleFiles = '*.{css,sass,scss,less,styl}';

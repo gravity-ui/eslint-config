@@ -1,7 +1,7 @@
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
-import {OFF, WARNING} from './constants.js';
+import {OFF, WARNING} from '../constants.js';
 
 export default [
     reactPlugin.configs.flat.recommended,

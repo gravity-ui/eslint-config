@@ -1,4 +1,4 @@
-const {ERROR} = require('./constants');
+const {ERROR} = require('../constants');
 
 module.exports = {
     plugins: ['security-node'],

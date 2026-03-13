@@ -1,9 +1,8 @@
 import globals from 'globals';
 
-import importConfig from './import-order.js';
-import prettierConfig from './prettier.js';
-
-import mainConfig from './index.js';
+import importConfig from './src/configs/import-order.js';
+import prettierConfig from './src/configs/prettier.js';
+import mainConfig from './src/index.js';
 
 export default [
     ...mainConfig,

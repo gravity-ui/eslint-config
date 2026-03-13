@@ -100,7 +100,7 @@
   },
   "nano-staged": {
     "*.{js,ts}": [
-      "eslint --fix --quiet --report-unused-disable-directives"
+      "eslint --fix --quiet --report-unused-disable-directives --flag unstable_native_nodejs_ts_config"
     ],
     "*.{md,yaml,yml,json}": [
       "prettier --write"

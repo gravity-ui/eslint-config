@@ -4,7 +4,7 @@ import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 import globals from 'globals';
 
-import {ERROR, OFF, WARNING} from './constants.js';
+import {ERROR, OFF, WARNING} from '../constants.js';
 
 export default [
     eslintPlugin.configs.recommended,

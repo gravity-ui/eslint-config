@@ -4,7 +4,7 @@ import typescriptParser from '@typescript-eslint/parser';
 import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 
-import {ERROR, OFF, WARNING} from './constants.js';
+import {ERROR, OFF, WARNING} from '../constants.js';
 
 export default [
     {
