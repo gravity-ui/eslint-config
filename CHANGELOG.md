@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/gravity-ui/eslint-config/compare/v4.2.1...v4.3.0) (2026-03-18)
+
+
+### Features
+
+* build configs with types ([#48](https://github.com/gravity-ui/eslint-config/issues/48)) ([a7510a4](https://github.com/gravity-ui/eslint-config/commit/a7510a456f19893f663d8050ef191fe22c43696f))
+
 ## [4.2.1](https://github.com/gravity-ui/eslint-config/compare/v4.2.0...v4.2.1) (2026-02-19)
 
 
