@@ -8,8 +8,8 @@
   ],
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
-  "types": "types/index.d.ts",
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
   "files": [
     "types/",
     "a11y.js",
