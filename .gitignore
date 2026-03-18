@@ -6,4 +6,4 @@
 node_modules
 
 # generated code
-/lib
+/types

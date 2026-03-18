@@ -1,7 +1,19 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["./*.js"],
+  "include": [
+    "a11y.js",
+    "base.js",
+    "client.js",
+    "constants.js",
+    "import-order.js",
+    "prettier.js",
+    "react.js",
+    "server.js",
+    "typescript.js"
+  ],
+
   "compilerOptions": {
-    "declaration": true
+    "declaration": true,
+    "emitDeclarationOnly": true
   }
 }

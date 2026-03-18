@@ -6,5 +6,5 @@
     "moduleResolution": "nodenext",
     "target": "esnext"
   },
-  "include": ["**/*.ts", "**/*.js"]
+  "include": ["**/*.js"]
 }
