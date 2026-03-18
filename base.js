@@ -6,7 +6,8 @@ import globals from 'globals';
 
 import {ERROR, OFF, WARNING} from './constants.js';
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+const baseConfig = [
     eslintPlugin.configs.recommended,
     jsdocPlugin.configs['flat/recommended'],
     {
@@ -133,3 +134,5 @@ export default [
         },
     },
 ];
+
+export default baseConfig;

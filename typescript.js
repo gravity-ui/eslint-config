@@ -6,13 +6,15 @@ import jsdocPlugin from 'eslint-plugin-jsdoc';
 
 import {ERROR, OFF, WARNING} from './constants.js';
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+const typescriptConfig = [
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx', '**/*.mtsx', '**/*.ctsx'],
         languageOptions: {
             parser: typescriptParser,
         },
         plugins: {
+            // @ts-expect-error some mess with types in plugin
             '@typescript-eslint': typescriptPlugin,
             stylistic: stylisticPlugin,
             import: importPlugin,
@@ -131,3 +133,5 @@ export default [
         },
     },
 ];
+
+export default typescriptConfig;

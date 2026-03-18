@@ -4,3 +4,6 @@
 
 # Dependencies
 node_modules
+
+# generated code
+/types

@@ -3,7 +3,8 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
 import {OFF, WARNING} from './constants.js';
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+const reactConfig = [
     reactPlugin.configs.flat.recommended,
     reactHooksPlugin.configs['recommended-latest'],
     {
@@ -43,3 +44,5 @@ export default [
         },
     },
 ];
+
+export default reactConfig;

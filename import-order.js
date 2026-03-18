@@ -3,7 +3,8 @@ import {ERROR} from './constants.js';
 const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
 const styleFiles = '*.{css,sass,scss,less,styl}';
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+const importOrderConfig = [
     {
         rules: {
             'import/order': [
@@ -48,3 +49,5 @@ export default [
         },
     },
 ];
+
+export default importOrderConfig;

@@ -1,6 +1,7 @@
-const {ERROR} = require('./constants');
+import {ERROR} from './constants.js';
 
-module.exports = {
+/** @type {import('eslint').Linter.LegacyConfig} */
+const securityConfig = {
     plugins: ['security-node'],
     env: {
         node: true,
@@ -9,3 +10,5 @@ module.exports = {
         'security-node/detect-dangerous-redirects': ERROR,
     },
 };
+
+export default securityConfig;

@@ -8,8 +8,10 @@
   ],
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./types/index.d.ts",
   "files": [
+    "types/",
     "a11y.js",
     "base.js",
     "client.js",
@@ -21,15 +23,42 @@
     "typescript.js"
   ],
   "exports": {
-    ".": "./index.js",
-    "./a11y": "./a11y.js",
-    "./base": "./base.js",
-    "./client": "./client.js",
-    "./import-order": "./import-order.js",
-    "./prettier": "./prettier.js",
-    "./react": "./react.js",
-    "./server": "./server.js",
-    "./typescript": "./typescript.js"
+    ".": {
+      "import": "./index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./a11y": {
+      "import": "./a11y.js",
+      "types": "./types/a11y.d.ts"
+    },
+    "./base": {
+      "import": "./base.js",
+      "types": "./types/base.d.ts"
+    },
+    "./client": {
+      "import": "./client.js",
+      "types": "./types/client.d.ts"
+    },
+    "./import-order": {
+      "import": "./import-order.js",
+      "types": "./types/import-order.d.ts"
+    },
+    "./prettier": {
+      "import": "./prettier.js",
+      "types": "./types/prettier.d.ts"
+    },
+    "./react": {
+      "import": "./react.js",
+      "types": "./types/react.d.ts"
+    },
+    "./server": {
+      "import": "./server.js",
+      "types": "./types/server.d.ts"
+    },
+    "./typescript": {
+      "import": "./typescript.js",
+      "types": "./types/typescript.d.ts"
+    }
   },
   "repository": {
     "type": "git",
@@ -45,7 +74,9 @@
     "lint": "npm run lint:js && npm run lint:prettier",
     "lint:js": "eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file",
     "lint:prettier": "npm run prettier -- --check",
-    "prettier": "prettier '**/*.{md,yaml,yml,json}'"
+    "prettier": "prettier '**/*.{md,yaml,yml,json}'",
+    "build": "tsc -p tsconfig.publish.json",
+    "prepublishOnly": "npm run -s build"
   },
   "dependencies": {
     "@babel/core": "^7.26.10",
@@ -53,11 +84,11 @@
     "@babel/preset-react": "^7.26.3",
     "@eslint/js": "^9.23.0",
     "@stylistic/eslint-plugin": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^8.30.1",
-    "@typescript-eslint/parser": "^8.30.1",
+    "@typescript-eslint/eslint-plugin": "^8.57.0",
+    "@typescript-eslint/parser": "^8.57.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-import-resolver-typescript": "^4.3.2",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsdoc": "^50.6.9",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.2.6",
@@ -71,11 +102,15 @@
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@gravity-ui/prettier-config": "^1.1.0",
+    "@gravity-ui/tsconfig": "^1.0.0",
+    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
+    "@types/eslint-plugin-security": "^3.0.1",
     "eslint": "^9.24.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "prettier": "^3.5.3",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "prettier": "^3.0.0",

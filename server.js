@@ -3,7 +3,8 @@ import globals from 'globals';
 
 import {ERROR, WARNING} from './constants.js';
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+const serverConfig = [
     {
         languageOptions: {
             globals: {
@@ -29,3 +30,5 @@ export default [
         },
     },
 ];
+
+export default serverConfig;
