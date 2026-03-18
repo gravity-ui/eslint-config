@@ -6,6 +6,7 @@
     "client.js",
     "constants.js",
     "import-order.js",
+    "index.js",
     "prettier.js",
     "react.js",
     "server.js",
