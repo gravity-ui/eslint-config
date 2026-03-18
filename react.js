@@ -1,10 +1,10 @@
-import type {Linter} from 'eslint';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 
-import {OFF, WARNING} from '../constants.js';
+import {OFF, WARNING} from './constants.js';
 
-const reactConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const reactConfig = [
     reactPlugin.configs.flat.recommended,
     reactHooksPlugin.configs['recommended-latest'],
     {

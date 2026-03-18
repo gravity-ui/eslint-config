@@ -1,9 +1,9 @@
-import type {Linter} from 'eslint';
 import globals from 'globals';
 
 import react from './react.js';
 
-const clientConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const clientConfig = [
     ...react,
     {
         languageOptions: {

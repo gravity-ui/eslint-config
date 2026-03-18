@@ -1,11 +1,10 @@
-import type {Linter} from 'eslint';
-
-import {ERROR} from '../constants.js';
+import {ERROR} from './constants.js';
 
 const assetFiles = '*.{svg,png,jpg,jpeg,webp,json}';
 const styleFiles = '*.{css,sass,scss,less,styl}';
 
-const importOrderConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const importOrderConfig = [
     {
         rules: {
             'import/order': [

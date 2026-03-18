@@ -8,47 +8,56 @@
   ],
   "license": "MIT",
   "type": "module",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
+  "types": "types/index.d.ts",
   "files": [
-    "lib/"
+    "types/",
+    "a11y.js",
+    "base.js",
+    "client.js",
+    "constants.js",
+    "import-order.js",
+    "prettier.js",
+    "react.js",
+    "server.js",
+    "typescript.js"
   ],
   "exports": {
     ".": {
-      "import": "./lib/index.js",
+      "import": "./index.js",
       "types": "./lib/index.d.ts"
     },
     "./a11y": {
-      "import": "./lib/configs/a11y.js",
-      "types": "./lib/configs/a11y.d.ts"
+      "import": "./a11y.js",
+      "types": "./types/a11y.d.ts"
     },
     "./base": {
-      "import": "./lib/configs/base.js",
-      "types": "./lib/configs/base.d.ts"
+      "import": "./base.js",
+      "types": "./types/base.d.ts"
     },
     "./client": {
-      "import": "./lib/configs/client.js",
-      "types": "./lib/configs/client.d.ts"
+      "import": "./client.js",
+      "types": "./types/client.d.ts"
     },
     "./import-order": {
-      "import": "./lib/configs/import-order.js",
-      "types": "./lib/configs/import-order.d.ts"
+      "import": "./import-order.js",
+      "types": "./types/import-order.d.ts"
     },
     "./prettier": {
-      "import": "./lib/configs/prettier.js",
-      "types": "./lib/configs/prettier.d.ts"
+      "import": "./prettier.js",
+      "types": "./types/prettier.d.ts"
     },
     "./react": {
-      "import": "./lib/configs/react.js",
-      "types": "./lib/configs/react.d.ts"
+      "import": "./react.js",
+      "types": "./types/react.d.ts"
     },
     "./server": {
-      "import": "./lib/configs/server.js",
-      "types": "./lib/configs/server.d.ts"
+      "import": "./server.js",
+      "types": "./types/server.d.ts"
     },
     "./typescript": {
-      "import": "./lib/configs/typescript.js",
-      "types": "./lib/configs/typescript.d.ts"
+      "import": "./typescript.js",
+      "types": "./types/typescript.d.ts"
     }
   },
   "repository": {
@@ -63,7 +72,7 @@
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 0",
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lint:js": "NODE_OPTIONS='--experimental-strip-types --import ./node-helpers/register.js' eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file --flag unstable_native_nodejs_ts_config",
+    "lint:js": "eslint . --report-unused-disable-directives --flag unstable_config_lookup_from_file",
     "lint:prettier": "npm run prettier -- --check",
     "prettier": "prettier '**/*.{md,yaml,yml,json}'",
     "build": "tsc -p tsconfig.publish.json",
@@ -124,7 +133,7 @@
   },
   "nano-staged": {
     "*.{js,ts}": [
-      "eslint --fix --quiet --report-unused-disable-directives --flag unstable_native_nodejs_ts_config"
+      "eslint --fix --quiet --report-unused-disable-directives"
     ],
     "*.{md,yaml,yml,json}": [
       "prettier --write"

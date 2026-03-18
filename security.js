@@ -1,8 +1,7 @@
-import type {Linter} from 'eslint';
+import {ERROR} from './constants.js';
 
-import {ERROR} from '../constants.js';
-
-const securityConfig: Linter.LegacyConfig = {
+/** @type {import('eslint').Linter.LegacyConfig} */
+const securityConfig = {
     plugins: ['security-node'],
     env: {
         node: true,

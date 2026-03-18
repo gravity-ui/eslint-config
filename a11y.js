@@ -1,7 +1,7 @@
-import type {Linter} from 'eslint';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
-const a11yConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const a11yConfig = [
     {
         ...jsxA11yPlugin.flatConfigs.recommended,
         languageOptions: {

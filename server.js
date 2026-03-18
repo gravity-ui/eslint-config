@@ -1,10 +1,10 @@
-import type {Linter} from 'eslint';
 import securityPlugin from 'eslint-plugin-security';
 import globals from 'globals';
 
-import {ERROR, WARNING} from '../constants.js';
+import {ERROR, WARNING} from './constants.js';
 
-const serverConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const serverConfig = [
     {
         languageOptions: {
             globals: {

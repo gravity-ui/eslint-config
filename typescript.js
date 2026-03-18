@@ -1,13 +1,13 @@
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import typescriptPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
-import type {Linter} from 'eslint';
 import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 
-import {ERROR, OFF, WARNING} from '../constants.js';
+import {ERROR, OFF, WARNING} from './constants.js';
 
-const typescriptConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const typescriptConfig = [
     {
         files: ['**/*.ts', '**/*.mts', '**/*.cts', '**/*.tsx', '**/*.mtsx', '**/*.ctsx'],
         languageOptions: {

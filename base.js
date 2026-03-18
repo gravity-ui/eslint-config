@@ -1,13 +1,13 @@
 import babelParser from '@babel/eslint-parser';
 import eslintPlugin from '@eslint/js';
-import type {Linter} from 'eslint';
 import importPlugin from 'eslint-plugin-import';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 import globals from 'globals';
 
-import {ERROR, OFF, WARNING} from '../constants.js';
+import {ERROR, OFF, WARNING} from './constants.js';
 
-const baseConfig: Linter.Config[] = [
+/** @type {import('eslint').Linter.Config[]} */
+const baseConfig = [
     eslintPlugin.configs.recommended,
     jsdocPlugin.configs['flat/recommended'],
     {

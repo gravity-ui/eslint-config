@@ -1,2 +1,1 @@
-export NODE_OPTIONS="--experimental-strip-types --import ./node-helpers/register.js"
 npx nano-staged
