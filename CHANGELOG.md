@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.1](https://github.com/gravity-ui/eslint-config/compare/v4.3.0...v4.3.1) (2026-03-24)
+
+
+### Bug Fixes
+
+* **package:** add index.js to published files list ([#50](https://github.com/gravity-ui/eslint-config/issues/50)) ([1daadbe](https://github.com/gravity-ui/eslint-config/commit/1daadbe0874dd40818d123116ed835577dad7371))
+
 ## [4.3.0](https://github.com/gravity-ui/eslint-config/compare/v4.2.1...v4.3.0) (2026-03-18)
 
 
