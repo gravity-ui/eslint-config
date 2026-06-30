@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.2](https://github.com/gravity-ui/eslint-config/compare/v4.3.1...v4.3.2) (2026-06-30)
+
+
+### Bug Fixes
+
+* change `typescript` versions range ([#52](https://github.com/gravity-ui/eslint-config/issues/52)) ([cb1d90c](https://github.com/gravity-ui/eslint-config/commit/cb1d90ce737d41191f2c7bdbc44022df8f0e8b25))
+
 ## [4.3.1](https://github.com/gravity-ui/eslint-config/compare/v4.3.0...v4.3.1) (2026-03-24)
 
 
