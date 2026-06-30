@@ -114,14 +114,10 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "prettier": "^3.0.0",
-    "typescript": "^5.8.3"
+    "prettier": "^3.0.0"
   },
   "peerDependenciesMeta": {
     "prettier": {
-      "optional": true
-    },
-    "typescript": {
       "optional": true
     }
   },
